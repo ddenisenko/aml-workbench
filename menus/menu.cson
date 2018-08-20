@@ -1,0 +1,97 @@
+'context-menu':
+  '.tree-view .file .name[data-name$=\\.raml]': [
+    {
+      label: 'Open RAML Outline',
+      command:  'aml-workbench:todo'
+    }
+  ],
+
+  '.raml-outline': [
+    {
+      label: 'Rename RAML Element',
+      command: 'aml-workbench:rename'
+    },
+    {
+      label: 'Find usages',
+      command: 'aml-workbench:find-usages'
+    }
+  ],
+
+  'atom-text-editor[data-grammar="source syaml"]': [
+      {
+        label: 'Go To Definition (OAS)',
+        command: 'aml-workbench:go-to-definition'
+      },
+      {
+        label: 'Rename RAML Element',
+        command: 'aml-workbench:rename'
+      },
+      {
+        label: 'Find usages',
+        command:  'aml-workbench:find-usages'
+      }
+    ]
+
+  'atom-text-editor[data-grammar="source raml"]': [
+    {
+      label: 'Go To Definition (RAML)',
+      command: 'aml-workbench:go-to-definition'
+    },
+    {
+      label: 'Rename RAML Element',
+      command: 'aml-workbench:rename'
+    },
+    {
+      label: 'Find usages',
+      command:  'aml-workbench:find-usages'
+    }
+  ]
+
+  'atom-text-editor[data-grammar="source sjson"]': [
+      {
+        label: 'Go To Definition (OAS)',
+        command: 'aml-workbench:go-to-definition'
+      },
+      {
+        label: 'Rename RAML Element',
+        command: 'aml-workbench:rename'
+      },
+      {
+        label: 'Find usages',
+        command:  'aml-workbench:find-usages'
+      }
+    ]
+'menu': [
+  {
+    label: 'Packages',
+    'submenu': [
+      {
+        'label': 'API Workbench',
+        'submenu': [
+          {
+            'label': 'Create RAML Project',
+            'command': 'aml-workbench:new-project'
+          },
+          {
+            type: 'separator'
+          },
+          {
+            'label': 'Open RAML Editor Tools',
+            'command': 'aml-workbench:editor-tools'
+          },
+          {
+            type: 'separator'
+          },
+          {
+            'label': 'Go To Definition',
+            'command': 'aml-workbench:go-to-definition'
+          },
+          {
+            'label': 'Find usages',
+            'command': 'aml-workbench:find-usages'
+          }
+        ]
+      }
+    ]
+  }
+]
